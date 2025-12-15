@@ -4,7 +4,8 @@
       "Bash(ls:*)",
       "Bash(git add:*)",
       "Bash(git rm:*)",
-      "Bash(git mv:*)"
+      "Bash(git mv:*)",
+      "Bash(rm:*)"
     ]
   }
 }

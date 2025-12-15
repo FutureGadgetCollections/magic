@@ -1,9 +1,7 @@
 # main links
 main:
-  - title: "Navigation"
-    url: /
   - title: "Collection"
-    url: /collections/
+    url: /collection/
   - title: "Invoices"
     url: /invoices/
   - title: "Portfolio Summary"
@@ -32,5 +30,9 @@ navigation:
 
 # Collections submenu
 collections:
-  - title: "Legos"
-    url: /collections/legos/
+  - title: "Avatar: The Last Airbender"
+    url: /collection/avatar/
+  - title: "Spider-Man"
+    url: /collection/spiderman/
+  - title: "Final Fantasy"
+    url: /collection/final-fantasy/
