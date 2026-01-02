@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic The Gathering : Collection/Portfolio</title>
+    <style>
+        @media print {
+            @page {
+                size: letter;
+                margin: 0.5in;
+            }
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+
+        .container {
+            border: 3px solid #667eea;
+            border-radius: 12px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #764ba2;
+            font-size: 20px;
+            margin: 25px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #764ba2;
+        }
+
+        .intro-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .intro-section p {
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .qr-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin: 25px 0;
+        }
+
+        .qr-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .qr-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .qr-card img {
+            width: 160px;
+            height: 160px;
+            margin: 10px auto;
+            display: block;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .qr-card p {
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+            word-break: break-all;
+        }
+
+        .design-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .design-content {
+            min-height: 120px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 4px solid #667eea;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .design-content ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .design-content li {
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #667eea;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .print-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .print-button:hover {
+            background: #764ba2;
+        }
+
+        strong {
+            color: #764ba2;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">🖨️ Print This Page</button>
+
+    <div class="container">
+        <header>
+            <h1>📦 Magic The Gathering : Collection/Portfolio</h1>
+            <p style="font-size: 18px; color: #666; margin-top: 10px;">Digital Inventory & Portfolio Tracker</p>
+        </header>
+
+        <div class="intro-section">
+            <h2>👋 Welcome to My Collection!</h2>
+            <p>
+                Thank you for your interest in this trading card collection! This collection features cards from
+                <strong>Magic: The Gathering</strong>.
+            </p>
+            <p>
+                <span class="highlight">Scan the QR codes below</span> to explore the full digital catalog,
+                view detailed statistics, browse individual set pages with high-resolution images, and track
+                real-time market valuations sourced from Google Sheets and Collectr.
+            </p>
+        </div>
+
+        <h2>🔗 Quick Access</h2>
+        <div class="qr-section">
+            <div class="qr-card">
+                <h3>📱 View Collection Online</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://futuregadgetcollections.github.io/magic/"
+                     alt="QR Code for Website">
+                <p>https://futuregadgetcollections.github.io/magic/</p>
+            </div>
+
+            <div class="qr-card">
+                <h3>🎨 Collectr Profile</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://app.getcollectr.com/showcase/profile/be47c36e-c7ad-4dc2-8192-29739ac66463"
+                     alt="QR Code for Collectr">
+                <p>View on Collectr</p>
+            </div>
+
+            <div class="qr-card">
+                <h3>📊 Google Sheets Backend</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://drive.google.com/drive/folders/1dowYbPJwJdXREjfTzMk_0yeJpPL05spy?usp=drive_link"
+                     alt="QR Code for Google Drive">
+                <p>Google Drive Folder</p>
+            </div>
+
+            <div class="qr-card">
+                <h3>💻 GitHub Source Code</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://github.com/FutureGadgetCollections/magic"
+                     alt="QR Code for GitHub">
+                <p>https://github.com/FutureGadgetCollections/magic</p>
+            </div>
+        </div>
+
+        <div class="design-section">
+            <h2>🎨 How This Site Was Designed</h2>
+            <div class="design-content">
+                <p><strong>Technology Stack:</strong></p>
+                <ul>
+                    <li><strong>Static Site Generator:</strong> Jekyll with Minimal Mistakes theme</li>
+                    <li><strong>Hosting:</strong> GitHub Pages</li>
+                    <li><strong>Data Source:</strong> Google Sheets (published as CSV)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>This collection is maintained and tracked digitally for transparency and easy reference.</p>
+            <p style="margin-top: 8px;">Last Updated: <strong id="current-date"></strong></p>
+        </div>
+    </div>
+
+    <script>
+        // Set current date
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
+</body>
+</html>
