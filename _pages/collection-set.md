@@ -1,7 +1,7 @@
 ---
-title: "Purchases"
-layout: archive
-permalink: /invoices/purchases/
+title: "Set Details"
+layout: single
+permalink: /collection/set/
 author_profile: false
 classes: wide
 ---
@@ -39,7 +39,7 @@ classes: wide
   }
   .sheets-link {
     display: inline-block;
-    margin: 10px 0;
+    margin: 10px 0 20px 0;
     padding: 8px 16px;
     background-color: #0066cc;
     color: white;
@@ -50,48 +50,52 @@ classes: wide
     background-color: #0052a3;
     color: white;
   }
-  .error {
-    color: #d8000c;
-    background-color: #ffd2d2;
-    padding: 10px;
+  .back-link {
+    display: inline-block;
+    margin: 10px 20px 20px 0;
+    padding: 8px 16px;
+    background-color: #666;
+    color: white;
+    text-decoration: none;
     border-radius: 4px;
   }
-  .table-controls {
-    margin: 20px 0 10px 0;
+  .back-link:hover {
+    background-color: #444;
+    color: white;
   }
-  .table-search {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    font-size: 14px;
-    border: 2px solid #009879;
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-  .table-search:focus {
-    outline: none;
-    border-color: #007a63;
-  }
-  .column-filter {
-    width: 100%;
-    padding: 5px;
-    font-size: 12px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    margin-top: 5px;
+  .set-header {
     background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
   }
-  .column-filter:focus {
-    outline: none;
-    border-color: #009879;
+  .set-summary {
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+  .set-stat {
+    font-size: 18px;
+  }
+  .inventory-table {
     background-color: white;
   }
 </style>
 
-All purchase transactions for the collection.
+<a href="{{ '/collection/' | relative_url }}" class="back-link">← Back to All Collections</a>
+<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS2yD_VKI9TKoUA2KrqMmobea7kcvxTkb4pnxrIJHKvziE6A4KF9A9uVg7j8z0H3sA3SkfnyOJMRgy0/pubhtml" target="_blank" class="sheets-link">View Full Inventory in Google Sheets</a>
 
-<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTvAt4xT_bG0Ub84pwrMr8BAcDVath2GLkM7lOqp898fGT2OIFEBnpOVVJjbKMeISsHxvJzyFZ8v1Ua/pubhtml" target="_blank" class="sheets-link">View in Google Sheets</a>
-
-<div id="purchases-table">
-  <p>Loading purchase data...</p>
+<div id="set-detail">
+  <p>Loading set details...</p>
 </div>
+
+<script>
+  // Get set name from URL parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const setName = urlParams.get('set');
+
+  if (setName) {
+    document.title = setName + ' - Set Details';
+  }
+</script>
